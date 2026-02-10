@@ -2,120 +2,106 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Taste of USA – Food Recipes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My TV Guide – Live TV Schedule</title>
+
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
-    body { font-family: 'Inter', sans-serif; }
+    body {
+      background: linear-gradient(120deg, #0f172a, #020617);
+    }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
 
-  <!-- Navbar -->
-  <header class="bg-white shadow sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-red-600">Taste of USA</h1>
-      <nav class="hidden md:flex space-x-6 font-medium">
-        <a href="#" class="hover:text-red-500">Home</a>
-        <a href="#recipes" class="hover:text-red-500">Recipes</a>
-        <a href="#about" class="hover:text-red-500">About</a>
-        <a href="#contact" class="hover:text-red-500">Contact</a>
-      </nav>
+<body class="text-white">
+
+<!-- HEADER -->
+<header class="bg-black/60 backdrop-blur-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+    <h1 class="text-2xl font-bold text-red-500">MyTVGuide</h1>
+    <nav class="space-x-6 hidden md:block">
+      <a href="#" class="hover:text-red-500">Home</a>
+      <a href="#channels" class="hover:text-red-500">Channels</a>
+      <a href="#schedule" class="hover:text-red-500">Schedule</a>
+      <a href="#contact" class="hover:text-red-500">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="max-w-7xl mx-auto px-4 py-20 text-center">
+  <h2 class="text-4xl md:text-6xl font-extrabold mb-6">
+    Your Daily <span class="text-red-500">TV Guide</span>
+  </h2>
+  <p class="text-gray-300 max-w-2xl mx-auto mb-8">
+    Discover live TV schedules, popular shows, and channels — all in one place.
+  </p>
+  <button class="bg-red-500 hover:bg-red-600 px-8 py-3 rounded-full font-semibold">
+    View Today’s Schedule
+  </button>
+</section>
+
+<!-- CHANNELS -->
+<section id="channels" class="max-w-7xl mx-auto px-4 py-16">
+  <h3 class="text-3xl font-bold mb-10 text-center">Popular Channels</h3>
+
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+    <div class="bg-white/10 p-6 rounded-xl hover:scale-105 transition text-center">
+      <p class="font-bold text-lg">News 24</p>
+      <span class="text-gray-400 text-sm">Breaking News</span>
     </div>
-  </header>
+    <div class="bg-white/10 p-6 rounded-xl hover:scale-105 transition text-center">
+      <p class="font-bold text-lg">Movie Max</p>
+      <span class="text-gray-400 text-sm">Movies</span>
+    </div>
+    <div class="bg-white/10 p-6 rounded-xl hover:scale-105 transition text-center">
+      <p class="font-bold text-lg">Sports Live</p>
+      <span class="text-gray-400 text-sm">Sports</span>
+    </div>
+    <div class="bg-white/10 p-6 rounded-xl hover:scale-105 transition text-center">
+      <p class="font-bold text-lg">Kids World</p>
+      <span class="text-gray-400 text-sm">Cartoons</span>
+    </div>
+  </div>
+</section>
 
-  <!-- Hero Section (No Copyright – CSS Gradient) -->
-  <section class="bg-gradient-to-r from-red-600 via-orange-500 to-yellow-400">
-    <div class="bg-black/50">
-      <div class="max-w-7xl mx-auto px-4 py-24 text-center text-white">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">Classic American Recipes</h2>
-        <p class="text-lg mb-6">Burgers, BBQ, Desserts & more – easy homemade recipes</p>
-        <a href="#recipes" class="bg-white text-red-600 hover:bg-gray-100 px-6 py-3 rounded-full font-semibold">Explore Recipes</a>
+<!-- SCHEDULE -->
+<section id="schedule" class="bg-black/40 py-16">
+  <div class="max-w-7xl mx-auto px-4">
+    <h3 class="text-3xl font-bold mb-10 text-center">Today’s Schedule</h3>
+
+    <div class="space-y-6">
+      <div class="flex justify-between bg-white/10 p-4 rounded-lg">
+        <span>08:00 AM</span>
+        <span>Morning News</span>
+        <span class="text-gray-400">News 24</span>
+      </div>
+      <div class="flex justify-between bg-white/10 p-4 rounded-lg">
+        <span>12:00 PM</span>
+        <span>Blockbuster Movie</span>
+        <span class="text-gray-400">Movie Max</span>
+      </div>
+      <div class="flex justify-between bg-white/10 p-4 rounded-lg">
+        <span>06:00 PM</span>
+        <span>Live Cricket</span>
+        <span class="text-gray-400">Sports Live</span>
+      </div>
+      <div class="flex justify-between bg-white/10 p-4 rounded-lg">
+        <span>09:00 PM</span>
+        <span>Kids Special</span>
+        <span class="text-gray-400">Kids World</span>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Recipes Section -->
-  <section id="recipes" class="max-w-7xl mx-auto px-4 py-16">
-    <h3 class="text-3xl font-bold text-center mb-12">Popular USA Recipes</h3>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-      <!-- Card 1 -->
-      <div class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
-        <div class="h-48 flex items-center justify-center bg-gradient-to-br from-yellow-300 to-red-400">
-          <span class="text-4xl">🍔</span>
-        </div>
-        <div class="p-6">
-          <h4 class="text-xl font-semibold mb-2">Classic Cheeseburger</h4>
-          <p class="text-sm text-gray-600 mb-4">Juicy beef patty with melted cheese, American style.</p>
-          <button onclick="showRecipe('burger')" class="text-red-600 font-semibold">View Recipe →</button>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
-        <div class="h-48 flex items-center justify-center bg-gradient-to-br from-red-500 to-orange-400">
-          <span class="text-4xl">🍖</span>
-        </div>
-        <div class="p-6">
-          <h4 class="text-xl font-semibold mb-2">BBQ Ribs</h4>
-          <p class="text-sm text-gray-600 mb-4">Slow cooked ribs with smoky BBQ flavor.</p>
-          <button onclick="showRecipe('ribs')" class="text-red-600 font-semibold">View Recipe →</button>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
-        <div class="h-48 flex items-center justify-center bg-gradient-to-br from-orange-300 to-yellow-400">
-          <span class="text-4xl">🥧</span>
-        </div>
-        <div class="p-6">
-          <h4 class="text-xl font-semibold mb-2">Apple Pie</h4>
-          <p class="text-sm text-gray-600 mb-4">Traditional dessert with cinnamon apples.</p>
-          <button onclick="showRecipe('pie')" class="text-red-600 font-semibold">View Recipe →</button>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="bg-white py-16">
-    <div class="max-w-5xl mx-auto px-4 text-center">
-      <h3 class="text-3xl font-bold mb-4">About Taste of USA</h3>
-      <p class="text-gray-600">This website uses only original layout, CSS gradients, and emoji icons. No copyrighted images or assets are used.</p>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="py-16">
-    <div class="max-w-4xl mx-auto px-4">
-      <h3 class="text-3xl font-bold text-center mb-8">Contact Us</h3>
-      <form class="bg-white p-8 rounded-2xl shadow space-y-4">
-        <input type="text" placeholder="Your Name" class="w-full border p-3 rounded" />
-        <input type="email" placeholder="Email Address" class="w-full border p-3 rounded" />
-        <textarea placeholder="Message" class="w-full border p-3 rounded"></textarea>
-        <button type="button" class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700">Send Message</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-300 py-6">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-      <p>© 2026 Taste of USA. Original Design. No Copyright Content.</p>
-    </div>
-  </footer>
-
-  <!-- JavaScript -->
-  <script>
-    function showRecipe(type) {
-      if (type === 'burger') alert('Cheeseburger: Bun, veg patty/beef patty, cheese, lettuce, tomato, sauce.');
-      if (type === 'ribs') alert('BBQ Ribs: Ribs, BBQ sauce, spices, slow cook until tender.');
-      if (type === 'pie') alert('Apple Pie: Apples, sugar, cinnamon, flour, butter.');
-    }
-  </script>
+<!-- FOOTER -->
+<footer id="contact" class="py-10 text-center text-gray-400">
+  <p>© 2026 MyTVGuide.site – All Rights Reserved</p>
+  <p class="text-sm mt-2">This is an independent TV guide website.</p>
+</footer>
 
 </body>
 </html>
