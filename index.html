@@ -2,197 +2,106 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Device Registration & Setup Guide</title>
-  <meta name="description" content="Step-by-step guide to set up and activate Prime Video on smart TVs and streaming devices without any copyright issues.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My TV Guide – Live TV Schedule</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #f7faff, #e3edf9);
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      min-height: 100vh;
-      padding: 20px;
-      line-height: 1.6em;
-    }
-    .container {
-      background-color: #ffffff;
-      border-radius: 12px;
-      padding: 25px 20px;
-      width: 100%;
-      max-width: 900px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    }
-    h1 {
-      font-size: 26px;
-      color: #2c3e50;
-      margin-bottom: 8px;
-      text-align: center;
-    }
-    .instructions {
-      font-size: 14px;
-      color: #555;
-      text-align: center;
-    }
-    .code-input input[type="text"] {
-      width: 100%;
-      padding: 14px;
-      margin-top: 20px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 16px;
-      text-align: center;
-    }
-    input::placeholder {
-      font-weight: 500;
-      color: #aaa;
-    }
-    .register-button {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
-    .register-button button {
-      width: 60%;
-      padding: 10px;
-      font-size: 15px;
-      font-weight: bold;
-      background-color: #3498db;
-      color: #fff;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-    .register-button button:hover {
-      background-color: #217dbb;
-      transform: scale(1.03);
-    }
-    .steps, .guide {
-      margin-top: 30px;
-    }
-    .steps h3, .guide h3 {
-      font-size: 18px;
-      color: #3498db;
-      margin-bottom: 10px;
-    }
-    .steps ul, .guide ul {
-      padding-left: 20px;
-    }
-    .steps li, .guide li {
-      margin-bottom: 10px;
-      font-size: 14px;
-      color: #333;
-    }
-    .guide-section {
-      background: #f8f9fa;
-      padding: 15px;
-      border-radius: 8px;
-      margin-top: 15px;
-      border-left: 5px solid #3498db;
-    }
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 22px;
-      }
-      .register-button button {
-        width: 80%;
-      }
-    }
-    @media (max-width: 480px) {
-      .container {
-        padding: 15px;
-      }
-      h1 {
-        font-size: 20px;
-      }
-      .register-button button {
-        width: 90%;
-        font-size: 14px;
-      }
+      background: linear-gradient(120deg, #0f172a, #020617);
     }
   </style>
 </head>
-<body>
-  <div class="container">
-    <h1>Register Your Device</h1>
-    <br>
-    <p class="instructions">Easily link your smart TV or streaming device to your account</p>
-    <br>
-    <p class="instructions">Enter the code displayed on your device to start streaming</p>
 
-    <div class="code-input">
-      <input type="text" placeholder="Enter Code" />
+<body class="text-white">
+
+<!-- HEADER -->
+<header class="bg-black/60 backdrop-blur-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+    <h1 class="text-2xl font-bold text-red-500">MyTVGuide</h1>
+    <nav class="space-x-6 hidden md:block">
+      <a href="#" class="hover:text-red-500">Home</a>
+      <a href="#channels" class="hover:text-red-500">Channels</a>
+      <a href="#schedule" class="hover:text-red-500">Schedule</a>
+      <a href="#contact" class="hover:text-red-500">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="max-w-7xl mx-auto px-4 py-20 text-center">
+  <h2 class="text-4xl md:text-6xl font-extrabold mb-6">
+    Your Daily <span class="text-red-500">TV Guide</span>
+  </h2>
+  <p class="text-gray-300 max-w-2xl mx-auto mb-8">
+    Discover live TV schedules, popular shows, and channels — all in one place.
+  </p>
+  <button class="bg-red-500 hover:bg-red-600 px-8 py-3 rounded-full font-semibold">
+    View Today’s Schedule
+  </button>
+</section>
+
+<!-- CHANNELS -->
+<section id="channels" class="max-w-7xl mx-auto px-4 py-16">
+  <h3 class="text-3xl font-bold mb-10 text-center">Popular Channels</h3>
+
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+    <div class="bg-white/10 p-6 rounded-xl hover:scale-105 transition text-center">
+      <p class="font-bold text-lg">News 24</p>
+      <span class="text-gray-400 text-sm">Breaking News</span>
     </div>
-
-    <div class="register-button">
-      <button id="registerButton">Register</button>
+    <div class="bg-white/10 p-6 rounded-xl hover:scale-105 transition text-center">
+      <p class="font-bold text-lg">Movie Max</p>
+      <span class="text-gray-400 text-sm">Movies</span>
     </div>
-    <br>
-
-    <div class="steps">
-      <h3>Quick Registration Steps</h3>
-      <ul>
-        <li>Open the streaming app on your TV or device.</li>
-        <li>Select “Register on the website.”</li>
-        <li>Note the code displayed on your screen.</li>
-        <li>Visit the registration page and enter your code.</li>
-      </ul>
+    <div class="bg-white/10 p-6 rounded-xl hover:scale-105 transition text-center">
+      <p class="font-bold text-lg">Sports Live</p>
+      <span class="text-gray-400 text-sm">Sports</span>
     </div>
+    <div class="bg-white/10 p-6 rounded-xl hover:scale-105 transition text-center">
+      <p class="font-bold text-lg">Kids World</p>
+      <span class="text-gray-400 text-sm">Cartoons</span>
+    </div>
+  </div>
+</section>
 
-    <div class="guide">
-      <h3>Setup Guide for Popular Devices</h3>
-      <div class="guide-section">
-        <strong>1. Fire TV / Stick</strong>
-        <ul>
-          <li>Open the app from the main menu.</li>
-          <li>If not installed, search and add it from the app store.</li>
-          <li>Sign in to start streaming.</li>
-        </ul>
+<!-- SCHEDULE -->
+<section id="schedule" class="bg-black/40 py-16">
+  <div class="max-w-7xl mx-auto px-4">
+    <h3 class="text-3xl font-bold mb-10 text-center">Today’s Schedule</h3>
+
+    <div class="space-y-6">
+      <div class="flex justify-between bg-white/10 p-4 rounded-lg">
+        <span>08:00 AM</span>
+        <span>Morning News</span>
+        <span class="text-gray-400">News 24</span>
       </div>
-      <div class="guide-section">
-        <strong>2. Roku</strong>
-        <ul>
-          <li>Navigate to Streaming Channels → Search for the app.</li>
-          <li>Add and launch the channel.</li>
-          <li>Sign in or use the activation code method.</li>
-        </ul>
+      <div class="flex justify-between bg-white/10 p-4 rounded-lg">
+        <span>12:00 PM</span>
+        <span>Blockbuster Movie</span>
+        <span class="text-gray-400">Movie Max</span>
       </div>
-      <div class="guide-section">
-        <strong>3. Apple TV</strong>
-        <ul>
-          <li>Search and install the app from the App Store.</li>
-          <li>Open it and log in or enter the displayed code online.</li>
-        </ul>
+      <div class="flex justify-between bg-white/10 p-4 rounded-lg">
+        <span>06:00 PM</span>
+        <span>Live Cricket</span>
+        <span class="text-gray-400">Sports Live</span>
       </div>
-      <div class="guide-section">
-        <strong>4. Android TV</strong>
-        <ul>
-          <li>Find and install the app from Google Play Store.</li>
-          <li>Launch and log in to your account.</li>
-        </ul>
-      </div>
-      <div class="guide-section">
-        <strong>5. Smart TVs</strong>
-        <ul>
-          <li>Check if the app is pre-installed or download it from the TV’s app store.</li>
-          <li>Open and log in to enjoy streaming.</li>
-        </ul>
+      <div class="flex justify-between bg-white/10 p-4 rounded-lg">
+        <span>09:00 PM</span>
+        <span>Kids Special</span>
+        <span class="text-gray-400">Kids World</span>
       </div>
     </div>
   </div>
+</section>
 
-  <script>
-    document.getElementById("registerButton").addEventListener("click", function () {
-      window.location.href = "index2.html";
-    });
-  </script>
+<!-- FOOTER -->
+<footer id="contact" class="py-10 text-center text-gray-400">
+  <p>© 2026 MyTVGuide.site – All Rights Reserved</p>
+  <p class="text-sm mt-2">This is an independent TV guide website.</p>
+</footer>
+
 </body>
-  </html>
+</html>
