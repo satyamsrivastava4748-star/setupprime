@@ -1,106 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My TV Guide – Live TV Schedule</title>
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <style>
-    body {
-      background: linear-gradient(120deg, #0f172a, #020617);
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MyTVGuide.site - Independent TV Guide</title>
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="text-white">
+<body class="bg-gray-100 text-gray-800">
 
-<!-- HEADER -->
-<header class="bg-black/60 backdrop-blur-md sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
-    <h1 class="text-2xl font-bold text-red-500">MyTVGuide</h1>
-    <nav class="space-x-6 hidden md:block">
-      <a href="#" class="hover:text-red-500">Home</a>
-      <a href="#channels" class="hover:text-red-500">Channels</a>
-      <a href="#schedule" class="hover:text-red-500">Schedule</a>
-      <a href="#contact" class="hover:text-red-500">Contact</a>
+<!-- Header -->
+<header class="bg-blue-900 text-white p-5">
+  <div class="max-w-6xl mx-auto flex justify-between items-center">
+    <h1 class="text-2xl font-bold">MyTVGuide.site</h1>
+    <nav class="space-x-6">
+      <a href="#home" class="hover:text-yellow-300">Home</a>
+      <a href="#schedule" class="hover:text-yellow-300">TV Schedule</a>
+      <a href="#articles" class="hover:text-yellow-300">Articles</a>
+      <a href="#about" class="hover:text-yellow-300">About</a>
+      <a href="#contact" class="hover:text-yellow-300">Contact</a>
     </nav>
   </div>
 </header>
 
-<!-- HERO SECTION -->
-<section class="max-w-7xl mx-auto px-4 py-20 text-center">
-  <h2 class="text-4xl md:text-6xl font-extrabold mb-6">
-    Your Daily <span class="text-red-500">TV Guide</span>
-  </h2>
-  <p class="text-gray-300 max-w-2xl mx-auto mb-8">
-    Discover live TV schedules, popular shows, and channels — all in one place.
+<!-- Hero Section -->
+<section class="bg-blue-700 text-white py-16 text-center">
+  <h2 class="text-4xl font-bold mb-4">Your Independent TV Guide Resource</h2>
+  <p class="text-lg">Daily TV schedules, entertainment updates, and viewing tips — all in one place.</p>
+</section>
+
+<!-- TV Schedule Section -->
+<section id="schedule" class="max-w-6xl mx-auto py-12 px-4">
+  <h3 class="text-3xl font-bold mb-6 text-center">Today's TV Highlights</h3>
+
+  <div class="grid md:grid-cols-3 gap-6">
+
+    <div class="bg-white p-6 rounded-xl shadow">
+      <h4 class="text-xl font-bold mb-2">Evening Drama</h4>
+      <p>8:00 PM – Popular drama series episode premiere.</p>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow">
+      <h4 class="text-xl font-bold mb-2">Live Sports</h4>
+      <p>7:30 PM – Live sports coverage and analysis.</p>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow">
+      <h4 class="text-xl font-bold mb-2">Movie Night</h4>
+      <p>9:00 PM – Featured blockbuster movie presentation.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Articles Section -->
+<section id="articles" class="bg-gray-200 py-12 px-4">
+  <div class="max-w-6xl mx-auto">
+    <h3 class="text-3xl font-bold mb-6 text-center">Latest TV Articles</h3>
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h4 class="text-xl font-bold mb-2">How to Improve Your TV Viewing Experience</h4>
+        <p>Simple tips to enhance picture quality and audio performance at home.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h4 class="text-xl font-bold mb-2">Top Trending Shows This Week</h4>
+        <p>A roundup of the most talked-about television programs.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="max-w-4xl mx-auto py-12 px-4 text-center">
+  <h3 class="text-3xl font-bold mb-4">About Us</h3>
+  <p>
+    MyTVGuide.site is an independent informational platform providing general TV schedules,
+    entertainment news, and viewing tips. We are not affiliated with any television network,
+    streaming service, or device manufacturer.
   </p>
-  <button class="bg-red-500 hover:bg-red-600 px-8 py-3 rounded-full font-semibold">
-    View Today’s Schedule
-  </button>
 </section>
 
-<!-- CHANNELS -->
-<section id="channels" class="max-w-7xl mx-auto px-4 py-16">
-  <h3 class="text-3xl font-bold mb-10 text-center">Popular Channels</h3>
-
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-    <div class="bg-white/10 p-6 rounded-xl hover:scale-105 transition text-center">
-      <p class="font-bold text-lg">News 24</p>
-      <span class="text-gray-400 text-sm">Breaking News</span>
-    </div>
-    <div class="bg-white/10 p-6 rounded-xl hover:scale-105 transition text-center">
-      <p class="font-bold text-lg">Movie Max</p>
-      <span class="text-gray-400 text-sm">Movies</span>
-    </div>
-    <div class="bg-white/10 p-6 rounded-xl hover:scale-105 transition text-center">
-      <p class="font-bold text-lg">Sports Live</p>
-      <span class="text-gray-400 text-sm">Sports</span>
-    </div>
-    <div class="bg-white/10 p-6 rounded-xl hover:scale-105 transition text-center">
-      <p class="font-bold text-lg">Kids World</p>
-      <span class="text-gray-400 text-sm">Cartoons</span>
-    </div>
-  </div>
+<!-- Contact Section -->
+<section id="contact" class="bg-gray-300 py-12 px-4 text-center">
+  <h3 class="text-3xl font-bold mb-4">Contact Us</h3>
+  <p>Email: support@mytvguide.site</p>
 </section>
 
-<!-- SCHEDULE -->
-<section id="schedule" class="bg-black/40 py-16">
-  <div class="max-w-7xl mx-auto px-4">
-    <h3 class="text-3xl font-bold mb-10 text-center">Today’s Schedule</h3>
-
-    <div class="space-y-6">
-      <div class="flex justify-between bg-white/10 p-4 rounded-lg">
-        <span>08:00 AM</span>
-        <span>Morning News</span>
-        <span class="text-gray-400">News 24</span>
-      </div>
-      <div class="flex justify-between bg-white/10 p-4 rounded-lg">
-        <span>12:00 PM</span>
-        <span>Blockbuster Movie</span>
-        <span class="text-gray-400">Movie Max</span>
-      </div>
-      <div class="flex justify-between bg-white/10 p-4 rounded-lg">
-        <span>06:00 PM</span>
-        <span>Live Cricket</span>
-        <span class="text-gray-400">Sports Live</span>
-      </div>
-      <div class="flex justify-between bg-white/10 p-4 rounded-lg">
-        <span>09:00 PM</span>
-        <span>Kids Special</span>
-        <span class="text-gray-400">Kids World</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer id="contact" class="py-10 text-center text-gray-400">
-  <p>© 2026 MyTVGuide.site – All Rights Reserved</p>
-  <p class="text-sm mt-2">This is an independent TV guide website.</p>
+<!-- Footer -->
+<footer class="bg-blue-900 text-white text-center p-6">
+  <p>© 2026 MyTVGuide.site - Independent Entertainment Resource</p>
+  <p class="text-sm mt-2">
+    Disclaimer: This website is an independent informational platform and is not affiliated
+    with any television network, streaming platform, or brand.
+  </p>
 </footer>
 
 </body>
