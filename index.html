@@ -1,103 +1,300 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MyTVGuide.site - Independent TV Guide</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<title>MyTVGuide | US TV Schedule & Streaming Guide</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#f4f4f4;
+color:#222;
+}
+
+header{
+background:#111827;
+color:white;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:500;
+}
+
+.hero{
+background:linear-gradient(120deg,#1e3a8a,#2563eb);
+color:white;
+padding:100px 10%;
+text-align:center;
+}
+
+.hero h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.container{
+padding:60px 10%;
+}
+
+.section-title{
+font-size:28px;
+margin-bottom:25px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+th{
+background:#2563eb;
+color:white;
+padding:12px;
+}
+
+td{
+padding:12px;
+border-bottom:1px solid #eee;
+text-align:center;
+}
+
+.about,.contact{
+background:white;
+padding:35px;
+border-radius:10px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+footer{
+background:#111827;
+color:white;
+text-align:center;
+padding:40px 20px;
+margin-top:60px;
+}
+
+footer a{
+color:#93c5fd;
+text-decoration:none;
+margin:0 10px;
+}
+
+</style>
+
 </head>
 
-<body class="bg-gray-100 text-gray-800">
+<body>
 
-<!-- Header -->
-<header class="bg-blue-900 text-white p-5">
-  <div class="max-w-6xl mx-auto flex justify-between items-center">
-    <h1 class="text-2xl font-bold">MyTVGuide.site</h1>
-    <nav class="space-x-6">
-      <a href="#home" class="hover:text-yellow-300">Home</a>
-      <a href="#schedule" class="hover:text-yellow-300">TV Schedule</a>
-      <a href="#articles" class="hover:text-yellow-300">Articles</a>
-      <a href="#about" class="hover:text-yellow-300">About</a>
-      <a href="#contact" class="hover:text-yellow-300">Contact</a>
-    </nav>
-  </div>
+<header>
+
+<h2>MyTVGuide</h2>
+
+<nav>
+
+<a href="#home">Home</a>
+<a href="#schedule">TV Schedule</a>
+<a href="#streaming">Streaming</a>
+<a href="#blog">Blog</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
 </header>
 
-<!-- Hero Section -->
-<section class="bg-blue-700 text-white py-16 text-center">
-  <h2 class="text-4xl font-bold mb-4">Your Independent TV Guide Resource</h2>
-  <p class="text-lg">Daily TV schedules, entertainment updates, and viewing tips — all in one place.</p>
+<section class="hero" id="home">
+
+<h1>Your Daily TV & Streaming Guide</h1>
+
+<p>Discover what's on TV tonight and explore trending streaming shows across the United States.</p>
+
 </section>
 
-<!-- TV Schedule Section -->
-<section id="schedule" class="max-w-6xl mx-auto py-12 px-4">
-  <h3 class="text-3xl font-bold mb-6 text-center">Today's TV Highlights</h3>
+<div class="container" id="streaming">
 
-  <div class="grid md:grid-cols-3 gap-6">
+<h2 class="section-title">Streaming Guides</h2>
 
-    <div class="bg-white p-6 rounded-xl shadow">
-      <h4 class="text-xl font-bold mb-2">Evening Drama</h4>
-      <p>8:00 PM – Popular drama series episode premiere.</p>
-    </div>
+<div class="cards">
 
-    <div class="bg-white p-6 rounded-xl shadow">
-      <h4 class="text-xl font-bold mb-2">Live Sports</h4>
-      <p>7:30 PM – Live sports coverage and analysis.</p>
-    </div>
+<div class="card">
+<h3>Top Shows This Week</h3>
+<p>Explore trending drama and comedy shows currently popular in the United States.</p>
+</div>
 
-    <div class="bg-white p-6 rounded-xl shadow">
-      <h4 class="text-xl font-bold mb-2">Movie Night</h4>
-      <p>9:00 PM – Featured blockbuster movie presentation.</p>
-    </div>
+<div class="card">
+<h3>Weekend Binge Picks</h3>
+<p>Looking for something to watch this weekend? Discover the best series to binge.</p>
+</div>
 
-  </div>
-</section>
+<div class="card">
+<h3>New Streaming Releases</h3>
+<p>Stay updated with the latest movies and shows released this month.</p>
+</div>
 
-<!-- Articles Section -->
-<section id="articles" class="bg-gray-200 py-12 px-4">
-  <div class="max-w-6xl mx-auto">
-    <h3 class="text-3xl font-bold mb-6 text-center">Latest TV Articles</h3>
+</div>
 
-    <div class="grid md:grid-cols-2 gap-6">
+</div>
 
-      <div class="bg-white p-6 rounded-xl shadow">
-        <h4 class="text-xl font-bold mb-2">How to Improve Your TV Viewing Experience</h4>
-        <p>Simple tips to enhance picture quality and audio performance at home.</p>
-      </div>
+<div class="container" id="schedule">
 
-      <div class="bg-white p-6 rounded-xl shadow">
-        <h4 class="text-xl font-bold mb-2">Top Trending Shows This Week</h4>
-        <p>A roundup of the most talked-about television programs.</p>
-      </div>
+<h2 class="section-title">Tonight's TV Schedule</h2>
 
-    </div>
-  </div>
-</section>
+<table>
 
-<!-- About Section -->
-<section id="about" class="max-w-4xl mx-auto py-12 px-4 text-center">
-  <h3 class="text-3xl font-bold mb-4">About Us</h3>
-  <p>
-    MyTVGuide.site is an independent informational platform providing general TV schedules,
-    entertainment news, and viewing tips. We are not affiliated with any television network,
-    streaming service, or device manufacturer.
-  </p>
-</section>
+<tr>
+<th>Time</th>
+<th>Channel</th>
+<th>Program</th>
+</tr>
 
-<!-- Contact Section -->
-<section id="contact" class="bg-gray-300 py-12 px-4 text-center">
-  <h3 class="text-3xl font-bold mb-4">Contact Us</h3>
-  <p>Email: support@mytvguide.site</p>
-</section>
+<tr>
+<td>7:00 PM</td>
+<td>ABC</td>
+<td>Evening News</td>
+</tr>
 
-<!-- Footer -->
-<footer class="bg-blue-900 text-white text-center p-6">
-  <p>© 2026 MyTVGuide.site - Independent Entertainment Resource</p>
-  <p class="text-sm mt-2">
-    Disclaimer: This website is an independent informational platform and is not affiliated
-    with any television network, streaming platform, or brand.
-  </p>
+<tr>
+<td>8:00 PM</td>
+<td>NBC</td>
+<td>Reality Talent Show</td>
+</tr>
+
+<tr>
+<td>9:00 PM</td>
+<td>FOX</td>
+<td>Drama Series</td>
+</tr>
+
+<tr>
+<td>10:00 PM</td>
+<td>CBS</td>
+<td>Late Night Talk Show</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="container" id="blog">
+
+<h2 class="section-title">Latest TV Articles</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Top 10 TV Shows to Watch This Week</h3>
+<p>Discover the most popular shows currently trending across US television.</p>
+</div>
+
+<div class="card">
+<h3>Best Comedy Shows for Weekend</h3>
+<p>A curated list of comedy series perfect for relaxing weekends.</p>
+</div>
+
+<div class="card">
+<h3>New Streaming Releases This Month</h3>
+<p>Explore the latest TV shows and movies arriving on streaming platforms.</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="container" id="about">
+
+<h2 class="section-title">About MyTVGuide</h2>
+
+<div class="about">
+
+<p>
+
+MyTVGuide is an independent entertainment information website that helps viewers discover television schedules, streaming recommendations, and trending TV shows in the United States.
+
+Our goal is to provide a simple and reliable guide for viewers looking for entertainment content.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="container" id="contact">
+
+<h2 class="section-title">Contact Us</h2>
+
+<div class="contact">
+
+<p>If you have questions or suggestions, feel free to contact us.</p>
+
+<p><strong>Email:</strong> support@mytvguide.site</p>
+
+</div>
+
+</div>
+
+<div class="container">
+
+<h2 class="section-title">Privacy Policy</h2>
+
+<p>
+We respect user privacy and do not collect personal data unless voluntarily provided. Cookies may be used to improve the website experience.
+</p>
+
+</div>
+
+<div class="container">
+
+<h2 class="section-title">Disclaimer</h2>
+
+<p>
+MyTVGuide provides informational content related to television schedules and streaming platforms. We do not host or distribute copyrighted video content.
+</p>
+
+</div>
+
+<footer>
+
+<p>© 2026 MyTVGuide.site</p>
+
+<p>Privacy Policy | Disclaimer | Contact</p>
+
 </footer>
 
 </body>
 </html>
+```
